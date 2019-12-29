@@ -12,6 +12,6 @@ Brewery.deleteMany({}).then(() => {
 			process.exit()
 		})
 		.catch((err) => {
-			console.log("it didn't work")
+			console.log("seed didn't work")
 		})
 })

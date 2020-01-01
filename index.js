@@ -10,11 +10,25 @@ app.use('/', breweryRoutes)
 
 
 // Create new brewery
-app.post('/', (req, res) => {
-	Brewery.create(req.body).then(brew => {
-		res.json(brew)
-	})
-})
+breweryRoutes.route('/create').post(function (req, res) {
+  const brewery = new Brewery(req.body);
+  brewery.save()
+    .then(brew => {
+      res.json(brew);
+    })
+    .catch(err => {
+      res.status(400).send("failed");
+    });
+});
+
+// Also create new brewery, not sure which way is correct
+// app.post('/', (req, res) => {
+// 	Brewery.create(req.body).then(brew => {
+// 		res.json(brew)
+// 	})
+// })
+
+
 
 
 // Get all breweries
@@ -41,16 +55,12 @@ app.get('/id/:_id', (req, res) => {
 	})
 })
 
-
-
 // Delete brewery by id ?
 app.delete('/id/:_id', (req, res) => {
 	Brewery.findOneAndDelete({ _id: req.params._id }).then(brew => {
 		res.json(brew)
 	})
 })
-
-
 
 
 

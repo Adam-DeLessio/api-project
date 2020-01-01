@@ -1,8 +1,16 @@
 const express = require('express')
 const breweryController = require('../controller/breweryController')
 const breweryRouter = express.Router()
+const Brewery = require('../model/Brewery')
 
-breweryRouter.get('/', breweryController.index)
+// Lists all breweries
+// breweryRouter.get('/', breweryController.index)
+
+// breweryRouter.get('/name/:name', function(req,res) {
+// 	Brewery.find({ 'name': req.params.name }).then(name => {
+
+// 	})
+// })
 
 module.exports = breweryRouter
 

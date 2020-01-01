@@ -1,4 +1,4 @@
-###### Virginia Breweries API
+# Virginia Breweries API
 
 ### Goals
 - Build a JSON API using Mongoose and Express. 
@@ -16,6 +16,7 @@
 - Heroku
 
 ### Example Object
+```
 [
   {
     "id": 7082,
@@ -37,6 +38,7 @@
   },
 ...
 ]
+```
 
 ### How to Use
 

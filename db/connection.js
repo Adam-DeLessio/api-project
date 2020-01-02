@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const mongoURL = 'mongodb://localhost/api-project'
+// const mongoURL = 'mongodb://localhost/api-project'
 let mongoURI = ''
 mongoose.Promise = Promise
 
@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'production') {
 	mongoURI = 'mongodb://localhost/api-project'
 }
 
-mongoose.connect(mongoURL, {
+mongoose.connect(mongoURI, {
 	useNewUrlParser : true,
     useUnifiedTopology: true
 })

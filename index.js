@@ -31,6 +31,7 @@ breweryRoutes.route('/create').post(function (req, res) {
 
 
 
+
 // Get all breweries
 // Example: http://localhost:6969/
 app.get('/', (req, res) => {
@@ -63,8 +64,11 @@ app.delete('/id/:_id', (req, res) => {
 })
 
 
+app.set('port', process.env.PORT || 8080)
 
-app.listen(6969, () => console.log('index working'))
+app.listen(app.get('port'), () => {
+	console.log(`✅ PORT: ${app.get("port")} 🌟`)
+})
 
 
 

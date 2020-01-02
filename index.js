@@ -6,6 +6,7 @@ const breweryRoutes = require('./routes/breweryRoutes')
 const Brewery = require('./model/Brewery')
 
 app.use(bodyParser.json())
+app.use(cors())
 app.use('/', breweryRoutes)
 
 

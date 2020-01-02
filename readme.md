@@ -48,7 +48,8 @@
 | GET | /name/:name | get brewery by name |
 | GET | /id/:_id | get brewery by id |
 
-
+### Heroku URL
+> https://mysterious-lowlands-53459.herokuapp.com/
 
 
 

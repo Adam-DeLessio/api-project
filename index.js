@@ -49,6 +49,14 @@ app.get('/name/:name', (req, res) => {
 	})
 })
 
+// Get brewery by the short id number
+// Example: 
+app.get('/id/:id', (req, res) => {
+	Brewery.find({ id: req.params.id }).then(brew => {
+		res.json(brew)
+	})
+})
+
 // Get brewery by id
 // Example: http://localhost:6969/id/5e091e1336567ffd665821d9
 app.get('/id/:_id', (req, res) => {

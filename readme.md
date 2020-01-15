@@ -49,7 +49,7 @@
 | GET | /id/:_id | get brewery by id |
 
 ### Heroku URL
-> https://virginia-breweries-api-project.herokuapp.com/
+> https://mysterious-lowlands-53459.herokuapp.com/
 
 
 

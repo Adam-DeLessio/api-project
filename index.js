@@ -50,7 +50,7 @@ app.get('/name/:name', (req, res) => {
 })
 
 // Get brewery by the short id number
-// Example: 
+// Example: https://mysterious-lowlands-53459.herokuapp.com/id/7082
 app.get('/id/:id', (req, res) => {
 	Brewery.find({ id: req.params.id }).then(brew => {
 		res.json(brew)

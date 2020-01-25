@@ -43,7 +43,6 @@
 ### How to Use
 | Method | Path | Description |
 | ------ | ---- | ----------- |
-| POST | /create | create a new brewery |
 | GET | / | get all breweries |
 | GET | /name/:name | get brewery by name |
 | GET | /id/:_id | get brewery by id |

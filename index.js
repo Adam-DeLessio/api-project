@@ -22,17 +22,6 @@ breweryRoutes.route('/create').post(function (req, res) {
     });
 });
 
-// Also create new brewery, not sure which way is correct
-// app.post('/', (req, res) => {
-// 	Brewery.create(req.body).then(brew => {
-// 		res.json(brew)
-// 	})
-// })
-
-
-
-
-
 // Get all breweries
 // Example: http://localhost:6969/
 app.get('/', (req, res) => {
@@ -65,24 +54,9 @@ app.get('/id/:_id', (req, res) => {
 	})
 })
 
-// Delete brewery by id ?
-app.delete('/id/:_id', (req, res) => {
-	Brewery.findOneAndDelete({ _id: req.params._id }).then(brew => {
-		res.json(brew)
-	})
-})
-
-
 app.set("port", process.env.PORT || 8080)
 
 app.listen(app.get('port'), () => {
 	console.log(`✅ PORT: ${app.get("port")} 🌟`)
 })
-
-
-
-// mysterious-lowlands-53459
-
-
-
 
